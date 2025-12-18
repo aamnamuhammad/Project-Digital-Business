@@ -16,7 +16,7 @@ jobs:
           - aarch64-unknown-linux-musl # ARM Linux (musl)
 
     env:
-      BINARY_NAME: fileorganizer-cli
+      BINARY_NAME: expense_tracker # Update to your tool's name
 
     steps:
       - name: Checkout code
@@ -24,6 +24,11 @@ jobs:
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
+
+      - name: Install dependencies for cross-compilation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y musl-tools libssl-dev
 
       - name: Install Cross
         run: cargo install cross
@@ -56,4 +61,4 @@ jobs:
             *.tar.gz
             *.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.BINARY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
