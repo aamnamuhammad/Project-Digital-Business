@@ -14,7 +14,6 @@ Download the latest release for your platform:
 
 - **Windows**: Download the Windows binary.
 - **Linux**: Download the Linux binary (`.tar.gz`).
-- **macOS**: Download the macOS binary (`.tar.gz`).
 
 After downloading, extract the file and run the binary from the terminal.
 
@@ -27,5 +26,6 @@ If you prefer to build the tool from source, follow these steps:
    ```bash
     git clone https://github.com/aamnamuhammad/Project-Digital-Business.git
    cd Project-Digital-Business
+
 
 
