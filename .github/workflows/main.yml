@@ -39,10 +39,14 @@ jobs:
       - name: Build with Cross
         run: cross build --target ${{ matrix.target }} --release --verbose
 
-      # Save the Linux binary as an artifact
-      - name: Save Linux binary as artifact
+      # Save the Linux binary as an artifact for x86_64
+      - name: Save x86_64 Linux binary as artifact
         if: matrix.target == 'x86_64-unknown-linux-musl'
         uses: actions/upload-artifact@v2
         with:
-          name: expense-tracker-linux-binary
+          name: expense-tracker-linux-x86_64-binary
           path: target/${{ matrix.target }}/release/$BINARY_NAME
+
+      # Save the Linux binary as an artifact for aarch64
+      - name: Save aarch64 Linux binary as artifact
+
