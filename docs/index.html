@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense Tracker Tool</title>
     <style>
-        /* Basic Reset */
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,118 +15,184 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
             line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
         }
 
+        /* Container for sections */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
         header {
-            background-color: #4CAF50;
+            background-color: #2c3e50;
             color: white;
+            padding: 50px 0;
             text-align: center;
-            padding: 2rem;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 20px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
-        section {
-            padding: 2rem;
-            margin: 1rem 0;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4CAF50;
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        ul li {
-            background-color: #f1f1f1;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 5px;
-        }
-
-        a {
-            color: #4CAF50;
+        .cta-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
             text-decoration: none;
-        }
-
-        .cta-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
             border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-            margin-top: 1rem;
+            font-size: 1.2em;
         }
 
-        .cta-btn:hover {
-            background-color: #45a049;
+        .cta-button:hover {
+            background-color: #c0392b;
         }
 
-        footer {
+        /* About Section */
+        .about {
+            background-color: white;
+            padding: 50px 0;
             text-align: center;
-            background-color: #333;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            margin: 15px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.2em;
+        }
+
+        /* Download Section */
+        .download {
+            background-color: #2c3e50;
             color: white;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .download p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Expense Tracker</h1>
-        <p>Keep track of your expenses, save money, and take control of your finances.</p>
+        <div class="container">
+            <h1>Expense Tracker Tool</h1>
+            <p>Track and manage your personal and business expenses with ease.</p>
+            <a href="#download" class="cta-button">Download Now</a>
+        </div>
     </header>
 
-    <section>
-        <h2>What Is Expense Tracker?</h2>
-        <p>Expense Tracker is a simple, user-friendly tool designed to help individuals and small businesses keep track of their expenses. Whether you're looking to monitor monthly spending, set a budget, or analyze your spending patterns, this tool is here to make it easy for you.</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About the Tool</h2>
+            <p>This tool is designed to help individuals, small business owners, and freelancers track their expenses. With its easy-to-use interface and real-time tracking, it's perfect for those who want to stay on top of their finances.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Features</h2>
-        <ul>
-            <li>Add expenses to different categories like Food, Transportation, Entertainment, etc.</li>
-            <li>View a detailed report of all expenses.</li>
-            <li>Export your data to CSV format for easy tracking and analysis.</li>
-            <li>Set up budgets and get notifications if you’re overspending.</li>
-        </ul>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Easy Expense Tracking</h3>
+                    <p>Track all your expenses in real-time. Categorize your spending easily.</p>
+                </div>
+                <div class="card">
+                    <h3>Instant Reporting</h3>
+                    <p>Get detailed reports on your spending habits and identify areas to save.</p>
+                </div>
+                <div class="card">
+                    <h3>Budget Management</h3>
+                    <p>Set monthly limits and track your progress in staying within budget.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Why Choose Expense Tracker?</h2>
-        <p>This tool is designed for <strong>individuals</strong>, <strong>small business owners</strong>, and <strong>freelancers</strong> who need to <strong>stay on top of their finances</strong>. Whether you're managing personal spending or tracking expenses for your business, this tool makes it simple and easy to understand your financial situation.</p>
-        <p>With its <strong>easy-to-use interface</strong>, <strong>instant expense tracking</strong>, and <strong>export options</strong>, Expense Tracker will help you:</p>
-        <ul>
-            <li><strong>Save time</strong> by quickly categorizing and tracking your spending.</li>
-            <li><strong>Stay within your budget</strong> and avoid overspending.</li>
-            <li><strong>Analyze your spending habits</strong> to identify where you can save money.</li>
-        </ul>
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Get Started with Expense Tracker</h2>
+            <p>Download the tool now and start managing your expenses today!</p>
+            <a href="https://github.com/aamnamuhammad/Project-Digital-Business/releases" class="cta-button">Download for Linux</a>
+        </div>
     </section>
 
-    <section>
-        <h2>How to Get Started</h2>
-        <p>Download the Expense Tracker tool from the <a href="https://github.com/aamnamuhammad/Project-Digital-Business/releases">Releases</a> section of this repository, and follow these simple steps:</p>
-        <ul>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Expense Tracker Tool. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
 
