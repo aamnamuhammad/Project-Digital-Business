@@ -1,3 +1,4 @@
+
 name: Release Statically Linked Rust Binary
 
 on:
@@ -14,13 +15,14 @@ jobs:
         target:
           - x86_64-unknown-linux-musl # Linux (musl)
           - aarch64-unknown-linux-musl # ARM Linux (musl)
+          - x86_64-pc-windows-msvc  # Windows (MSVC)
 
     env:
       BINARY_NAME: expense_tracker # Update to your tool's name
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -45,7 +47,7 @@ jobs:
 
           if [[ "${{ matrix.target }}" == "windows" ]]; then
             cp target/${{ matrix.target }}/release/$BINARY_NAME.exe release/
-            zip -r ${{ matrix.target }}.zip release
+            zip -r ${{ matrix.target }}.zip release  # Use .zip for Windows
           elif [[ "${{ matrix.target }}" == "darwin" ]]; then
             cp target/${{ matrix.target }}/release/$BINARY_NAME release/
             tar -czvf ${{ matrix.target }}.tar.gz -C release $BINARY_NAME
